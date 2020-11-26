@@ -1,8 +1,8 @@
 package device
 
 import (
-	"github.com/use-go/onvif/xsd"
-	"github.com/use-go/onvif/xsd/onvif"
+	"github.com/neverhover/onvif/xsd"
+	"github.com/neverhover/onvif/xsd/onvif"
 )
 
 type Service struct {

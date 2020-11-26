@@ -1,4 +1,4 @@
-module github.com/use-go/onvif
+module github.com/neverhover/onvif
 
 go 1.14
 
