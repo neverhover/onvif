@@ -62,9 +62,9 @@ type OSDConfiguration struct {
 	VideoSourceConfigurationToken OSDReference              `xml:"onvif:VideoSourceConfigurationToken"`
 	Type                          OSDType                   `xml:"onvif:Type"`
 	Position                      OSDPosConfiguration       `xml:"onvif:Position"`
-	TextString                    OSDTextConfiguration      `xml:"onvif:TextString"`
-	Image                         OSDImgConfiguration       `xml:"onvif:Image"`
-	Extension                     OSDConfigurationExtension `xml:"onvif:Extension"`
+	TextString                    OSDTextConfiguration      `xml:"onvif:TextString,,omitempty"`
+	Image                         OSDImgConfiguration       `xml:"onvif:Image,,omitempty"`
+	Extension                     OSDConfigurationExtension `xml:"onvif:Extension,,omitempty"`
 }
 
 type OSDType xsd.String
