@@ -72,7 +72,7 @@ type OSDType xsd.String
 type OSDPosConfiguration struct {
 	Type      string                       `xml:"onvif:Type"`
 	Pos       Vector                       `xml:"onvif:Pos"`
-	Extension OSDPosConfigurationExtension `xml:"onvif:Extension"`
+	Extension OSDPosConfigurationExtension `xml:"onvif:Extension,omitempty"`
 }
 
 type Vector struct {
@@ -85,20 +85,20 @@ type OSDPosConfigurationExtension xsd.AnyType
 type OSDReference ReferenceToken
 
 type OSDTextConfiguration struct {
-	IsPersistentText xsd.Boolean `xml:"IsPersistentText,attr"`
+	IsPersistentText xsd.Boolean `xml:"IsPersistentText,attr,omitempty"`
 
 	Type            xsd.String                    `xml:"onvif:Type"`
-	DateFormat      xsd.String                    `xml:"onvif:DateFormat"`
-	TimeFormat      xsd.String                    `xml:"onvif:TimeFormat"`
-	FontSize        xsd.Int                       `xml:"onvif:FontSize"`
-	FontColor       OSDColor                      `xml:"onvif:FontColor"`
-	BackgroundColor OSDColor                      `xml:"onvif:BackgroundColor"`
-	PlainText       xsd.String                    `xml:"onvif:PlainText"`
-	Extension       OSDTextConfigurationExtension `xml:"onvif:Extension"`
+	DateFormat      xsd.String                    `xml:"onvif:DateFormat,omitempty"`
+	TimeFormat      xsd.String                    `xml:"onvif:TimeFormat,omitempty"`
+	FontSize        xsd.Int                       `xml:"onvif:FontSize,omitempty"`
+	FontColor       OSDColor                      `xml:"onvif:FontColor,omitempty"`
+	BackgroundColor OSDColor                      `xml:"onvif:BackgroundColor,omitempty"`
+	PlainText       xsd.String                    `xml:"onvif:PlainText,omitempty"`
+	Extension       OSDTextConfigurationExtension `xml:"onvif:Extension,omitempty"`
 }
 
 type OSDColor struct {
-	Transparent int `xml:"Transparent,attr"`
+	Transparent int `xml:"Transparent,attr,omitempty"`
 
 	Color Color `xml:"onvif:Color"`
 }
